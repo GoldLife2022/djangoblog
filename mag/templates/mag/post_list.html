@@ -5,7 +5,20 @@
             <title>Strona do magazynowania</title>
         </head>
         <body>
-            <h1>Witam na stronie magazynu</h1>
-            <p>To jest akapit</p>
+            <div>
+                <h1>Witam na stronie magazynu</h1>
+                <p>To jest akapit</p>
+            </div>
+
+                {% for post in posts%}
+            <div>
+                <p>opublikowany: {{ post.publish_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <em>{{ post.text|linebreaksbr }}</em>
+            </div>
+            {% endfor %}
+            <div>
+
+            </div>
         </body>
     </html>
